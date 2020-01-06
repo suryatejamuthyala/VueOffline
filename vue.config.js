@@ -4,7 +4,7 @@ module.exports = {
   pwa: {
     workboxPluginMode: 'InjectManifest',
     workboxOptions: {
-      swSrc:'public/service-worker-prod.js'
+      swSrc:'./service-worker-prod.js'
     },
 
     inlineWorkboxRuntime: true,
