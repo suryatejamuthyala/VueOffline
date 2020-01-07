@@ -47,8 +47,8 @@
             },
 
             onMenu: function () {
-                //if (document.getElementById("content-div"))
-                //        document.getElementById("content-div").style.display = "block";
+                if (document.getElementById("content-div"))
+                       document.getElementById("content-div").style.display = "block";
             },
 
             getImangeUrl: function (indexNumber) {
@@ -85,6 +85,9 @@
             },
 
             pageChange: async function (item) {
+                if (document.getElementById("content-div"))
+                    document.getElementById("content-div").style.display = "none";
+
                 var impageContainerDiv = document.getElementById("contents-container");
                 var loadingIndicatorDiv = document.getElementById("appLoadingIndicator");
                 loadingIndicatorDiv.style.display = "block";
@@ -633,6 +636,7 @@
     @media only screen and (min-width: 762px) and (max-width: 1024px) {
         .connection-status {
             font-size: 20px;
+            width: 180px;
         }
 
         .quarter-option {
