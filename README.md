@@ -13,7 +13,7 @@
     d. npm run env NODE_ENV=production
     e. vue add pwa
     f. npm run build
-    g. npm run serve
+    g. npm run serve // if using Apache httpd please add dist folder to directory (never commit dist and node_modules)
     h. Application by default opens in 8080 port if you want to open in a different port - "serve": "vue-cli-service serve --port 82"
     i. run  "git pull" to check out latest code
 6. Once code changes are commited from IDE or git commit - run command "git push -u origin master"
@@ -37,7 +37,7 @@
     j. export NODE_ENV=production // if doesnt work - npm run env NODE_ENV=production
     k. vue add pwa // If fails run "npm i -g vue-cli eslint" or npm install -g vue-cli & run the command again
     l. npm run build //npx vue-cli-service build --modern
-    m. npm run serve
+    m. npm run serve // if using Apache httpd please add dist folder to directory (never commit dist and node_modules)
     n. Application by default opens in 8080 port if you want to open in a different port - "serve": "vue-cli-service serve --port 82"
     o. run  "git pull" to check out latest code
 6. Once code changes are commited from IDE or git commit - run command "git push -u origin master"

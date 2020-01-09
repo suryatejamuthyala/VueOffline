@@ -4,7 +4,7 @@
 // If you do want to use this, you'll need to update the file manually for every change to trigger an update
 // Last modified: 2018-04-25 12:58PT
 
-const cacheName = 'docappsui-v1';
+const cacheName = 'docappsui-v2';
 //This should be name of old cache
 // eslint-disable-next-line no-unused-vars
 const oldCacheName = 'docappsui-v1';
