@@ -72,6 +72,6 @@ async function cacheFirst(req) {
         }
     } catch (e) {
         // eslint-disable-next-line no-console
-        console.log("Error geting the file via cache first");
+        console.log("Error getting the file via cache first");
     }
 }
