@@ -44,7 +44,7 @@
 ```
 ###Jenkins build
 ```
-http://build/jenkins/job/pdfViewerdocAppsUAT-Git/
+https://git.loomissayles.com/docAppsProjects/pdfimage.git
 ```
 ###Contact
 ```
