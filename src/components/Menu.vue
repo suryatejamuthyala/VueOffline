@@ -366,25 +366,25 @@
                             name: "AttributionSector",
                             displayName: "Attribution - Sector",
                             order: 4,
-                            pageCount: 29
+                            pageCount: 33
                         },
                         {
                             name: "AttributionRegion",
                             displayName: "Attribution - Region",
                             order: 5,
-                            pageCount: 24
+                            pageCount: 27
                         },
                         {
                             name: "AttributionCountry",
                             displayName: "Attribution – Country",
                             order: 6,
-                            pageCount: 24
+                            pageCount: 27
                         },
                         {
                             name: "ContributionData",
                             displayName: "Contribution Data",
                             order: 7,
-                            pageCount: 29
+                            pageCount: 30
                         },
                         {
                             name: "RiskData",
@@ -408,7 +408,7 @@
                             name: "Holdings",
                             displayName: "Holdings",
                             order: 11,
-                            pageCount: 15
+                            pageCount: 16
                         },
                         {
                             name: "MarketingBookData",
@@ -420,7 +420,7 @@
                             name: "QuarterlyCommentary",
                             displayName: "Quarterly Commentary",
                             order: 13,
-                            pageCount: 76
+                            pageCount: 72
                         },
                         {
                             name: "AlphaThesisPaper",
