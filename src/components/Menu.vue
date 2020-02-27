@@ -116,13 +116,13 @@
 
         async mounted() {
             this.loadingIndicator = true;
-            if (window.document.location.search === "?book=acg") {
+            if          (window.document.location.search === "?book=acg") {
                 this.currentBook = this.acg;
-            } else if (window.document.location.search === "?book=lcg") {
+            } else if   (window.document.location.search === "?book=lcg") {
                 this.currentBook = this.lcg;
-            } else if (window.document.location.search === "?book=ggro") {
+            } else if   (window.document.location.search === "?book=ggro") {
                 this.currentBook = this.ggro;
-            } else if (window.document.location.search === "?book=slsef") {
+            } else if   (window.document.location.search === "?book=slsef") {
                 this.currentBook = this.slsef;
             }
             this.pageCount = this.currentBook.data[0].pageCount;
