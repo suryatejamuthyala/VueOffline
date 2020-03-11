@@ -48,7 +48,7 @@
 
             onMenu: function () {
                 if (document.getElementById("content-div"))
-                       document.getElementById("content-div").style.display = "block";
+                    document.getElementById("content-div").style.display = "block";
             },
 
             getImangeUrl: function (indexNumber) {
@@ -116,13 +116,13 @@
 
         async mounted() {
             this.loadingIndicator = true;
-            if          (window.document.location.search === "?book=acg") {
+            if (window.document.location.search === "?book=acg") {
                 this.currentBook = this.acg;
-            } else if   (window.document.location.search === "?book=lcg") {
+            } else if (window.document.location.search === "?book=lcg") {
                 this.currentBook = this.lcg;
-            } else if   (window.document.location.search === "?book=ggro") {
+            } else if (window.document.location.search === "?book=ggro") {
                 this.currentBook = this.ggro;
-            } else if   (window.document.location.search === "?book=slsef") {
+            } else if (window.document.location.search === "?book=slsef") {
                 this.currentBook = this.slsef;
             }
             this.pageCount = this.currentBook.data[0].pageCount;
@@ -259,13 +259,13 @@
                             name: "AttributionData",
                             displayName: "Attribution Data",
                             order: 2,
-                            pageCount: 84
+                            pageCount: 89
                         },
                         {
                             name: "ContributionData",
                             displayName: "Contribution Data",
                             order: 3,
-                            pageCount: 105
+                            pageCount: 109
                         },
                         {
                             name: "RiskData",
@@ -307,13 +307,13 @@
                             name: "Holdings",
                             displayName: "Holdings",
                             order: 10,
-                            pageCount: 55
+                            pageCount: 56
                         },
                         {
                             name: "ADRWeights",
                             displayName: "ADR Weights",
                             order: 11,
-                            pageCount: 112
+                            pageCount: 114
                         },
                         {
                             name: "MarketingBookData",
@@ -325,7 +325,7 @@
                             name: "QuarterlyCommentary",
                             displayName: "Quarterly Commentary",
                             order: 13,
-                            pageCount: 73
+                            pageCount: 64
                         },
                         {
                             name: "AlphaThesisPaper",
