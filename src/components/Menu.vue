@@ -182,13 +182,13 @@
                             name: "AttributionData",
                             displayName: "Attribution Data",
                             order: 2,
-                            pageCount: 99
+                            pageCount: 105
                         },
                         {
                             name: "ContributionData",
                             displayName: "Contribution Data",
                             order: 3,
-                            pageCount: 106
+                            pageCount: 110
                         },
                         {
                             name: "RiskData",
@@ -218,25 +218,25 @@
                             name: "Holdings",
                             displayName: "Holdings",
                             order: 8,
-                            pageCount: 55
+                            pageCount: 56
                         },
                         {
                             name: "ADRWeights",
                             displayName: "ADR Weights",
                             order: 9,
-                            pageCount: 122
+                            pageCount: 124
                         },
                         {
                             name: "MarketingBookData",
                             displayName: "Marketing Book Data",
                             order: 10,
-                            pageCount: 32
+                            pageCount: 28
                         },
                         {
                             name: "QuarterlyCommentary",
                             displayName: "Quarterly Commentary",
                             order: 11,
-                            pageCount: 83
+                            pageCount: 77
                         },
                         {
                             name: "StockStories",
@@ -443,13 +443,13 @@
                             name: "AttributionData",
                             displayName: "Attribution - Sector",
                             order: 2,
-                            pageCount: 45
+                            pageCount: 49
                         },
                         {
                             name: "ContributionData",
                             displayName: "Contribution Data",
                             order: 3,
-                            pageCount: 49
+                            pageCount: 50
                         },
                         {
                             name: "Characteristics",
@@ -467,7 +467,7 @@
                             name: "Holdings",
                             displayName: "Holdings",
                             order: 6,
-                            pageCount: 31
+                            pageCount: 32
                         },
                         {
                             name: "FundStatistics",
