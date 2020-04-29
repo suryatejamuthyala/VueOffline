@@ -1,11 +1,11 @@
-# PDFIMAGE
+# VUE Image Offline
 
 ###How to Setup project in Windows
 ```
 1. Install Java & Set Java path - https://javatutorial.net/set-java-home-windows-10
 2. Install NPM setup environmental variables if required
 3. Install Git
-4. check out git code from https://git.loomissayles.com/docAppsProjects/pdfimage.git
+4. check out git code from https://github.com/suryatejamuthyala/VueOffline.git
 5. Run the below commands
     a. npm install async-q
     b. npm install vue
@@ -23,7 +23,7 @@
 1. Install Java & Set Java path http://www.sajeconsultants.com/how-to-set-java_home-on-mac-os-x/ 
 2. Install Ruby https://www.ruby-lang.org/en/documentation/installation/
 3. Install Brew - https://brew.sh/
-4. check out git code from https://git.loomissayles.com/docAppsProjects/pdfimage.git
+4. check out git code from https://github.com/suryatejamuthyala/VueOffline.git
 5. Run below Commands
     a. brew install npm
     b. brew install git
@@ -42,13 +42,10 @@
     o. run  "git pull" to check out latest code
 6. Once code changes are commited from IDE or git commit - run command "git push -u origin master"
 ```
-###Jenkins build
-```
-https://git.loomissayles.com/docAppsProjects/pdfimage.git
 ```
 ###Contact
 ```
-Please reach Surya if you have any issues - smuthyala@loomissayles.com
+Please reach Surya if you have any issues - suryamuthyala@yahoo.com
 ```
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

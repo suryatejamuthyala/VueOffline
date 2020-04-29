@@ -116,15 +116,10 @@
 
         async mounted() {
             this.loadingIndicator = true;
-            if (window.document.location.search === "?book=acg") {
-                this.currentBook = this.acg;
-            } else if (window.document.location.search === "?book=lcg") {
-                this.currentBook = this.lcg;
-            } else if (window.document.location.search === "?book=ggro") {
-                this.currentBook = this.ggro;
-            } else if (window.document.location.search === "?book=slsef") {
-                this.currentBook = this.slsef;
-            }
+            if (window.document.location.search === "?book=book1") {
+                this.currentBook = this.book1;
+            } else if (window.document.location.search === "?book=book2") {
+                this.currentBook = this.book2;
             this.pageCount = this.currentBook.data[0].pageCount;
             this.currentBook.bookname = this.currentBook.data[0].name;
             this.selectedBook = this.currentBook.data[0].displayName;
@@ -169,323 +164,25 @@
                 selectedFolder: null,
                 lastUrl: null,
                 selectedBook: "Book",
-                acg: {
-                    name: "ACG",
+                book1: {
+                    name: "book1",
                     data: [
                         {
-                            name: "SectorData",
-                            displayName: "Sector Data",
+                            name: "Page 1",
+                            displayName: "page1",
                             order: 1,
                             pageCount: 70
-                        },
-                        {
-                            name: "AttributionData",
-                            displayName: "Attribution Data",
-                            order: 2,
-                            pageCount: 105
-                        },
-                        {
-                            name: "ContributionData",
-                            displayName: "Contribution Data",
-                            order: 3,
-                            pageCount: 110
-                        },
-                        {
-                            name: "RiskData",
-                            displayName: "Risk Data",
-                            order: 4,
-                            pageCount: 21
-                        },
-                        {
-                            name: "Characteristics",
-                            displayName: "Characteristics",
-                            order: 5,
-                            pageCount: 15
-                        },
-                        {
-                            name: "Trades",
-                            displayName: "Trades",
-                            order: 6,
-                            pageCount: 13
-                        },
-                        {
-                            name: "DetailedTransactions",
-                            displayName: "Detailed Transactions",
-                            order: 7,
-                            pageCount: 27
-                        },
-                        {
-                            name: "Holdings",
-                            displayName: "Holdings",
-                            order: 8,
-                            pageCount: 56
-                        },
-                        {
-                            name: "ADRWeights",
-                            displayName: "ADR Weights",
-                            order: 9,
-                            pageCount: 124
-                        },
-                        {
-                            name: "MarketingBookData",
-                            displayName: "Marketing Book Data",
-                            order: 10,
-                            pageCount: 28
-                        },
-                        {
-                            name: "QuarterlyCommentary",
-                            displayName: "Quarterly Commentary",
-                            order: 11,
-                            pageCount: 77
-                        },
-                        {
-                            name: "StockStories",
-                            displayName: "Stock Stories",
-                            order: 12,
-                            pageCount: 30
                         }
                     ]
                 },
-                lcg: {
-                    name: "LCG",
+                book1: {
+                    name: "book2",
                     data: [
                         {
-                            name: "SectorData",
-                            displayName: "Sector Data",
+                            name: "Page2",
+                            displayName: "Page 2",
                             order: 1,
                             pageCount: 70
-                        },
-                        {
-                            name: "AttributionData",
-                            displayName: "Attribution Data",
-                            order: 2,
-                            pageCount: 89
-                        },
-                        {
-                            name: "ContributionData",
-                            displayName: "Contribution Data",
-                            order: 3,
-                            pageCount: 109
-                        },
-                        {
-                            name: "RiskData",
-                            displayName: "Risk Data",
-                            order: 4,
-                            pageCount: 21
-                        },
-                        {
-                            name: "Characteristics",
-                            displayName: "Characteristics",
-                            order: 5,
-                            pageCount: 15
-                        },
-                        {
-                            name: "Trades",
-                            displayName: "Trades",
-                            order: 6,
-                            pageCount: 13
-                        },
-                        {
-                            name: "DetailedTransactions",
-                            displayName: "Detailed Transactions",
-                            order: 7,
-                            pageCount: 27
-                        },
-                        {
-                            name: "Amazon",
-                            displayName: "Amazon",
-                            order: 8,
-                            pageCount: 8
-                        },
-                        {
-                            name: "HOLTAnalysis",
-                            displayName: "HOLT Analysis",
-                            order: 9,
-                            pageCount: 5
-                        },
-                        {
-                            name: "Holdings",
-                            displayName: "Holdings",
-                            order: 10,
-                            pageCount: 56
-                        },
-                        {
-                            name: "ADRWeights",
-                            displayName: "ADR Weights",
-                            order: 11,
-                            pageCount: 114
-                        },
-                        {
-                            name: "MarketingBookData",
-                            displayName: "Marketing Book Data",
-                            order: 12,
-                            pageCount: 59
-                        },
-                        {
-                            name: "QuarterlyCommentary",
-                            displayName: "Quarterly Commentary",
-                            order: 13,
-                            pageCount: 64
-                        },
-                        {
-                            name: "AlphaThesisPaper",
-                            displayName: "Alpha Thesis Paper",
-                            order: 14,
-                            pageCount: 12
-                        },
-                        {
-                            name: "StockStories",
-                            displayName: "Stock Stories",
-                            order: 15,
-                            pageCount: 30
-                        }
-                    ]
-                },
-                ggro: {
-                    name: "GGRO",
-                    data: [
-                        {
-                            name: "SectorData",
-                            displayName: "Sector Data",
-                            order: 1,
-                            pageCount: 12
-                        },
-                        {
-                            name: "RegionData",
-                            displayName: "Region Data",
-                            order: 2,
-                            pageCount: 12
-                        },
-                        {
-                            name: "CountryData",
-                            displayName: "Country Data",
-                            order: 3,
-                            pageCount: 16
-                        },
-                        {
-                            name: "AttributionSector",
-                            displayName: "Attribution - Sector",
-                            order: 4,
-                            pageCount: 33
-                        },
-                        {
-                            name: "AttributionRegion",
-                            displayName: "Attribution - Region",
-                            order: 5,
-                            pageCount: 27
-                        },
-                        {
-                            name: "AttributionCountry",
-                            displayName: "Attribution – Country",
-                            order: 6,
-                            pageCount: 27
-                        },
-                        {
-                            name: "ContributionData",
-                            displayName: "Contribution Data",
-                            order: 7,
-                            pageCount: 30
-                        },
-                        {
-                            name: "RiskData",
-                            displayName: "Risk Data",
-                            order: 8,
-                            pageCount: 21
-                        },
-                        {
-                            name: "Characteristics",
-                            displayName: "Characteristics",
-                            order: 9,
-                            pageCount: 5
-                        },
-                        {
-                            name: "Trades",
-                            displayName: "Trades",
-                            order: 10,
-                            pageCount: 4
-                        },
-                        {
-                            name: "Holdings",
-                            displayName: "Holdings",
-                            order: 11,
-                            pageCount: 16
-                        },
-                        {
-                            name: "MarketingBookData",
-                            displayName: "Marketing Book Data",
-                            order: 12,
-                            pageCount: 12
-                        },
-                        {
-                            name: "QuarterlyCommentary",
-                            displayName: "Quarterly Commentary",
-                            order: 13,
-                            pageCount: 72
-                        },
-                        {
-                            name: "AlphaThesisPaper",
-                            displayName: "Alpha Thesis Paper",
-                            order: 14,
-                            pageCount: 12
-                        }
-                    ]
-                },
-                slsef: {
-                    name: "SLSEF",
-                    data: [
-                        {
-                            name: "SectorData",
-                            displayName: "Sector Data",
-                            order: 1,
-                            pageCount: 32
-                        },
-                        {
-                            name: "AttributionData",
-                            displayName: "Attribution - Sector",
-                            order: 2,
-                            pageCount: 49
-                        },
-                        {
-                            name: "ContributionData",
-                            displayName: "Contribution Data",
-                            order: 3,
-                            pageCount: 50
-                        },
-                        {
-                            name: "Characteristics",
-                            displayName: "Characteristics",
-                            order: 4,
-                            pageCount: 9
-                        },
-                        {
-                            name: "Trades",
-                            displayName: "Trades",
-                            order: 5,
-                            pageCount: 20
-                        },
-                        {
-                            name: "Holdings",
-                            displayName: "Holdings",
-                            order: 6,
-                            pageCount: 32
-                        },
-                        {
-                            name: "FundStatistics",
-                            displayName: "Fund Statistics",
-                            order: 7,
-                            pageCount: 7
-                        },
-                        {
-                            name: "MarketingBook",
-                            displayName: "Marketing Book",
-                            order: 8,
-                            pageCount: 64
-                        },
-                        {
-                            name: "InvestorLetter",
-                            displayName: "Investor Letter",
-                            order: 9,
-                            pageCount: 44
                         }
                     ]
                 }
