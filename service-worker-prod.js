@@ -1,4 +1,3 @@
-
 // Hey there! This is an over-simplified ServiceWorker for a tutorial.
 // For any real apps, please use workboxjs.org or similar
 // If you do want to use this, you'll need to update the file manually for every change to trigger an update
@@ -53,25 +52,33 @@ async function networkFirst(req) {
 
 async function cacheFirst(req) {
     let cachedResponse = null;
-    let fresh = null
+    let fresh = null;
     try {
         if (req.cache === 'only-if-cached' && req.mode !== 'same-origin') return;
-        else {
-            if (req.method == 'GET') {
-                const cache = await caches.open(cacheName);
-                cachedResponse = await cache.match(req);
-                if (!cachedResponse) {
-                    fresh = await fetch(req);
-                    cache.add(req);
-                }
-                else
-                    return cachedResponse;
 
+        if (req.method == 'GET') {
+            const cache = await caches.open(cacheName);
+            cachedResponse = await cache.match(req);
+
+            // Handle S3 presigned URLs differently
+            if (!cachedResponse && req.url.includes('amazonaws.com')) {
+                fresh = await fetch(req);
+                // Store the response with the original URL pattern
+                const originalUrl = new URL(req.url);
+                const cacheKey = new Request(originalUrl.pathname);
+                cache.put(cacheKey, fresh.clone());
                 return fresh;
             }
+
+            if (!cachedResponse) {
+                fresh = await fetch(req);
+                cache.add(req);
+            } else {
+                return cachedResponse;
+            }
+            return fresh;
         }
     } catch (e) {
-        // eslint-disable-next-line no-console
-        console.log("Error getting the file via cache first");
+        console.log("Error getting the file via cache first", e);
     }
 }

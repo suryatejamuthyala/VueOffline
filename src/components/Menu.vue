@@ -35,7 +35,8 @@
     </div>
 </template>
 <script>
-    export default {
+import { getImageFromS3 } from '../services/aws-service';
+export default {
         name: "Menu",
         props: {
             type: String
@@ -51,16 +52,23 @@
                     document.getElementById("content-div").style.display = "block";
             },
 
-            getImangeUrl: function (indexNumber) {
-                return (
-                    "./content/" +
+            getImangeUrl: async function (indexNumber) {
+                const imagePath =
+                    "content/" +
                     this.currentBook.name +
                     "/html5/" +
                     this.currentBook.bookname +
                     "/r_Page_" +
                     this.getPageNumber(this.pageCount, indexNumber) +
-                    ".png"
-                );
+                    ".png";
+
+                try {
+                    return await getImageFromS3(process.env.VUE_APP_S3_BUCKET, imagePath);
+                } catch (error) {
+                    console.error('Failed to load image from S3:', error);
+                    // Fallback to local path if S3 fails
+                    return "./" + imagePath;
+                }
             },
             getImangeUrlForBook: function (totalPages, indexNumber, name, bookname) {
                 return (
@@ -105,7 +113,7 @@
                 // add new imaages
                 for (var j = 0; j < this.pageCount; j++) {
                     var imag = document.createElement("img");
-                    imag.src = this.getImangeUrl(j + 1);
+                    imag.src = await this.getImangeUrl(j + 1);
                     impageContainerDiv.appendChild(imag);
                 }
                 this.loadingIndicator = false;
@@ -120,6 +128,7 @@
                 this.currentBook = this.book1;
             } else if (window.document.location.search === "?book=book2") {
                 this.currentBook = this.book2;
+            }
             this.pageCount = this.currentBook.data[0].pageCount;
             this.currentBook.bookname = this.currentBook.data[0].name;
             this.selectedBook = this.currentBook.data[0].displayName;
@@ -175,7 +184,7 @@
                         }
                     ]
                 },
-                book1: {
+                book2: {
                     name: "book2",
                     data: [
                         {
